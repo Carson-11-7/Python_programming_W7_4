@@ -15,7 +15,7 @@ def readTimestamps(PFilename: str, PTimestamps: list[TIMESTAMP]) -> None:
         if firstLine:       
             firstLine = False
             continue
-        if line == "\n":       
+        if not line.strip():       
             continue
         row = line.rstrip()
         columns = row.split(DELIMITER)
